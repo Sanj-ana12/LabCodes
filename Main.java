@@ -1,36 +1,25 @@
 package test;
-
-class Employee {
- void work() {
-     System.out.println("Employee is working.");
- }
-
- double getSalary() {
-     return 30000.00; 
- }
+class Vehicle {
+    void drive() {
+        System.out.println("Driving a vehicle");
+    }
 }
 
 
-class HRManager extends Employee {
-
- void work() {
-     System.out.println("HR Manager is managing HR tasks.");
- }
-
- void addEmployee() {
-     System.out.println("HR Manager added a new employee.");
- }
+class Car extends Vehicle {
+   
+    void drive() {
+        System.out.println("Repairing a car");
+    }
 }
+
 
 public class Main {
- public static void main(String[] args) {
-     Employee genericEmployee = new Employee();
-     genericEmployee.work();
-     System.out.println("Salary: " + genericEmployee.getSalary());
+    public static void main(String[] args) {
+        Vehicle myVehicle = new Vehicle();
+        myVehicle.drive();  
 
-     HRManager hr = new HRManager();
-     hr.work();             
-     System.out.println("Salary: " + hr.getSalary());  
-     hr.addEmployee();     
- }
+        Car myCar = new Car();
+        myCar.drive();      
+    }
 }
